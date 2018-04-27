@@ -1,2 +1,2 @@
 # GuessTheMovieGame
-Task for Udacity OOP Java course
+Task from Udacity OOP Java course
