@@ -1,22 +1,29 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
 
-    public static void main (String[] args) throws Exception {
-
+    public String hiddenMovieName() throws FileNotFoundException {
         File file = new File("movies.txt");
         Scanner scanner = new Scanner(file);
-        ArrayList<String> movieList = new ArrayList<String>();
-        int randomNumber;
+
+        ArrayList<String> movieList = new ArrayList<>();
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
-            System.out.println(line);
-            //movieList.add(line);
+            movieList.add(line);
         }
 
-        //System.out.println(movieList);
+        int size = movieList.size();
+        int randomNumber = (int) (Math.random() * size);
+
+        String luckyMovie = movieList.get(randomNumber);
+
+        luckyMovie = luckyMovie.replaceAll("[a-zA-Z]", "_");
+
+        return luckyMovie;
     }
+
 }
