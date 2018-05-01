@@ -21,9 +21,6 @@ public class Game {
 
         String luckyMovie = movieList.get(randomNumber);
 
-        luckyMovie = luckyMovie.replaceAll("[a-zA-Z]", "_");
-
         return luckyMovie;
     }
-
 }
