@@ -89,6 +89,7 @@ public class Main {
             if(wrongLetterCounter == 10) {
                 System.out.println("You have guessed (" + wrongLetterCounter + ") wrong letters: " + wrongLetter);
                 System.out.println("You have not guessed the Movie. You lose.");
+                System.out.println("The guessed movie was: \"" + theMovie + "\"");
                 isGuessed = true;
             }
 
